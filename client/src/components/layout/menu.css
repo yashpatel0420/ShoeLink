@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Futura-Std-Extra-Bold-Condensed-Oblique';
+    src: url(../fonts/Futura\ Std\ Extra\ Bold\ Condensed\ Oblique.ttf);
+}
+@font-face {
+    font-family: 'Futura-Std-Extra-bold-Oblique';
+    src: url(../fonts/Futura\ Std\ Extra\ Bold\ Oblique.ttf);
+}
+@font-face {
+    font-family: 'Futura-Std-Heavy-Oblique';
+    src: url(../fonts/Futura\ Std\ Heavy\ Oblique.ttf);
+}
+@font-face {
+    font-family: 'Futura-Std-Book-Oblique';
+    src: url(../fonts/Futura\ Std\ Book\ Oblique.ttf);
+}
+@font-face {
+    font-family: 'Futura-Std-Book';
+    src: url(../fonts/Futura\ Std\ Book.ttf);
+}
+.box
+{
+    width: 350px;
+}
+.box h2{
+    font-family: 'Futura-Std-Extra-Bold-Oblique';
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+}
+.box ul{
+    position: relative;
+    background-color: #fff;
+}
+.box ul li{
+    list-style: none;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    border: 1px solid #383d52;
+    width: 100%;
+    font-family: 'Futura-Std-Heavy-Oblique';
+    background: #383d52;
+    transition: transform 0.5s;
+}
+.box ul a{
+    text-decoration: none;
+    width: 100%;
+    color: #fff;
+    font-family: 'Futura-Std-Heavy-Oblique';
+}
+.box ul li:hover{
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(1.1);
+}

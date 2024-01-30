@@ -1,0 +1,603 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ======== page not found css ======= */
+.pnf {
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+}
+/* ========================================= */
+
+/* ======== About page css ======= */
+.about-splash{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: #1d2026;
+}
+.about-splash h1{
+  color: #1d2026;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  text-align: center;
+  position: relative;
+  font-size: 150px;
+  -webkit-text-stroke: 0.1vw #383d52;
+}
+.about-splash h1::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 3px solid #fff;
+  overflow: hidden;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,10%,100%{
+      width: 0%;
+  }
+  70%,90%{
+      width: 100%;
+  }
+}
+.about-headings{
+  background-color: #1d2026;
+}
+.about-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-main-title{
+  font-size: 4em;
+  color: white;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+}
+.about-content{
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+.about-content .about-image img{
+  z-index: 111;
+  position: relative;
+  width: 100%;
+  padding: 20px 50px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.about-text-box{
+  z-index: 222;
+  padding: 40px;
+  max-width: 80%;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 50px;
+  text-align: justify;
+}
+.about-text-box h3{
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  color: #fff;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  border-bottom: 3px solid rgb(255, 72, 72);
+}
+.about-text-box p{
+  font-family: 'Futura-Std-Book-Oblique', sans-serif;
+  letter-spacing: 1px;
+}
+.about-text-box-app{
+  z-index: 222;
+  padding: 40px;
+  max-width: 80%;
+  border-radius: 10px;
+  margin-top: 50px;
+  color: white;
+}
+.about-text-box-app h3{
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  border-bottom: 3px solid rgb(255, 72, 72);
+}
+.about-text-box-app img{
+  width: 100%;
+  z-index: 100;
+}
+.about-text-box-app p{
+  font-family: 'Futura-Std-Book-Oblique', sans-serif;
+  text-align: center;
+  margin: 10px 0px;
+}
+.about-text-box-app-explore {
+  text-align: center;
+}
+.about-text-box-app-explore button{
+  padding: 5px 20px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 100;
+}
+/* ========================================= */
+
+/* ======== Register & Login page css ======= */
+.register-splash{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: #1d2026;
+}
+.register-splash h1{
+  color: #1d2026;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  text-align: center;
+  position: relative;
+  font-size: 150px;
+  -webkit-text-stroke: 0.1vw #383d52;
+}
+.register-splash h1::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 3px solid #fff;
+  overflow: hidden;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,100%{
+      width: 0%;
+  }
+  10%{
+      width: 100%;
+  }
+}
+.registerForm{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 40px 400px;
+}
+.registerForm input{
+  margin: 15px 0px;
+}
+.registerForm label{
+  font-family: 'Futura-Std-Book-Oblique';
+}
+.registerForm .resetPassword{
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique";
+  letter-spacing: 1px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #383d52;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 12px 20px;
+  font-family: 'Futura-Std-Book';
+  margin: 8px 0;
+  border: none;
+  display: inline-block;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  font-weight: bold;
+  background-color: #383d52;
+  color: white;
+  letter-spacing: 2px;
+  font-family: 'Futura-Std-Heavy-Oblique';
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(255, 217, 0);
+  color: #383d52;
+  font-weight: bold;
+}
+
+.registerForm p{
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Futura-Std-Book';
+}
+
+.registerForm p a{
+  text-decoration: none;
+}
+.registerForm p a:hover{
+  color: rgb(255, 72, 72);
+}
+/* ========================================= */
+
+/* ======== Admin Dashboard css ======= */
+.adminMenu{
+  flex: 1;
+  width: 350px;
+  margin-left: 20px;
+}
+.adminContent{
+  width: 100%;
+  margin: 0px 50px;
+}
+.adminGridContainer{
+  display: flex;
+  padding: 10px;
+}
+.admin_heading{
+  text-align: center; 
+  margin-top: 10px;
+  padding: 10px 0px;
+  font-size: 40px;
+  color: white;
+  background: #24252a;
+  border-radius: 20px;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+}
+.admin_heading span{
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  color: rgb(255, 217, 0); 
+}
+section{
+  padding: 0px 20px;
+}
+.content-table {
+  border-collapse: collapse;
+  text-align: center;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #1d2026;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.content-table th {
+  padding: 8px 15px;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  font-family: 'Futura-Std-Heavy-Oblique';
+}
+.content-table td {
+  padding: 12px 15px;
+  font-family: 'Futura-Std-Heavy-Oblique';
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #1d2026;
+}
+.admin_button {
+  padding: 5px 30px;
+  border: none;
+  background-color: #1d2026;
+  color: white;
+  margin-right: 10px;
+  font-family: 'Futura-Std-Heavy-Oblique';
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.admin_button:hover{
+  background-color: rgb(255, 217, 0);
+  color: #1d2026;
+  cursor: pointer;
+}
+
+.categoryForm{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 20px;
+}
+
+.uploadPhoto{
+  padding: 10px 15px;
+  border-radius: 5px; 
+  cursor: pointer; 
+  background-color: #1d2026;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Futura-Std-Heavy-Oblique';
+  letter-spacing: 1px;
+}
+.uploadPhoto:hover{
+  color: #1d2026;
+  background-color: white;
+}
+.uploadedPhoto{
+  display: block;
+  height: 250px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.product_container{  
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;  
+}
+.product_card{
+  /* width: 300px; */
+  border-radius: 20px;
+  margin: 20px;
+  /* height: 570px; */
+  position: relative;
+  background-color: #f0f0f0;
+}
+.product_card:hover{
+  box-shadow: 1px 2px 10px 2px #888888;
+  cursor: pointer;
+}
+.product_img img{
+  width: 250px;
+  padding: 20px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-position: 0 -75px;
+  background-size: cover;
+}
+.adminProduct_detail{
+  width: 250px;
+  height: 75px;
+  text-align: center;
+  background-color: #24252a;
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px;
+  color: #fff;
+}
+.adminProduct_detail a{
+  text-decoration: none;
+  color: white;
+}
+.adminProduct_detail span{
+  font-family: "Futura-Std-Heavy-Oblique", sans-serif;
+
+}
+.adminProduct_detail p{
+  font-size: 0.8rem;
+  color: #898989;
+  margin-top: 15px;
+  font-family: 'Futura-Std-Book';
+  text-align: justify;
+}
+.product_buttons{
+  height: 65px;
+  margin: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product_price{
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: 'Futura-Std-Book';
+}
+.cart-btn{
+  position: relative;
+  border: none;
+  outline: none;
+  background-color: white;
+  height: 30px;
+  border-radius: 10px;
+  font-family: 'Futura-Std-Book';
+  padding: 0px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.cart-btn:hover{
+  background-color: rgb(255, 72, 72);
+  color: white;
+}
+.product-heading{
+  text-align: center;
+  margin: 30px 80px;
+}
+.product-heading h1{
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  font-size: 50px;
+  border-bottom: 2px solid ;
+}
+.product-heading p{
+  margin-top: 20px;
+}
+/* ========================================= */
+
+
+/* ======== Home page css ======= */
+.homeMenu{
+  width: 350px;
+  margin-left: 20px;
+}
+.homeMenu .checkbox{
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
+}
+.homeMenu .checkbox button{
+  padding: 8px 50px;
+  background-color: #24252a;
+  border: none;
+  color: rgb(255, 217, 0);
+  border-radius: 10px;
+  font-family: "Futura-Std-Heavy-Oblique", sans-serif;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}
+.homeMenu .checkbox button:hover{
+  color: #24252a;
+  background-color: rgb(255, 217, 0);
+}
+.homeContent{
+  width: 100%;
+  margin: 0px 50px;
+}
+.home_heading{
+  text-align: center; 
+  margin-top: 28px;
+  padding: 10px 0px;
+  font-size: 40px;
+  color: #24252a;
+  border-bottom: 5px solid #24252a;
+  border-radius: 5px;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+}
+.home_heading span{
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  color: rgb(255, 217, 0); 
+}
+.homeProduct_detail{
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  background-color: #24252a;
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px;
+  color: #fff;
+}
+.homeProduct_detail a{
+  text-decoration: none;
+  color: white;
+}
+.homeProduct_detail span{
+  font-family: "Futura-Std-Heavy-Oblique", sans-serif;
+}
+.homeProduct_detail button{
+  padding: 5px 15px;
+  margin-top: 10px;
+  background-color: #ccc;
+  border: none;
+  font-family: "Futura-Std-Heavy-Oblique", sans-serif;
+  border-radius: 5px;
+  color: #24252a;
+  cursor: pointer;
+}
+.homeProduct_detail button:hover{
+  background-color: rgb(255, 217, 0);
+  color: #24252a;
+}
+.homeFilter_heading{
+  text-align: center; 
+  margin-top: 52px;
+  padding: 10px 0px;
+  font-size: 20px;
+  color: #24252a;
+  border-bottom: 5px solid #24252a;
+  border-radius: 5px;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+}
+.homeFilter_heading span{
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  color: rgb(255, 72, 72); 
+}
+.LoadMore{
+  width: 100%;
+  padding: 10px;
+  background-color: #24252a;
+  color: rgb(255, 217, 0);
+  border: none;
+  border-radius: 5px;
+  font-family: "Futura-Std-Heavy-Oblique", sans-serif;
+  cursor: pointer;
+}
+.LoadMore:hover{
+  color: #24252a;
+  background-color: rgb(255, 217, 0);
+}
+/* .homeProduct_detail p{
+  font-size: 0.8rem;
+  color: #898989;
+  margin-top: 15px;
+  font-family: 'Futura-Std-Book';
+  text-align: justify;
+} */
+.topnav {
+  overflow: hidden;
+}
+
+.topnav .search-container {
+  padding: 0px 200px;
+  margin-top: 10px;
+}
+
+.topnav input[type=text] {
+  padding: 5px;
+  font-size: 17px;
+  border-radius: 0px;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+
+/* ========================================= */
+
+
+/* ========  page css ======= */
+/* ========================================= */
