@@ -53,7 +53,6 @@ const Header = () => {
               }
           </div>
       </header>
-      <SearchInput />
     </div>
 
   )
