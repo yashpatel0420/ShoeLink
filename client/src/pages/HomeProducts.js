@@ -6,9 +6,12 @@ import { Link } from 'react-router-dom';
 import { Checkbox, Radio } from 'antd';
 import { Prices } from '../components/Prices.js';
 import SearchInput from '../components/Form/SearchInput.js';
+import { useCart } from "../context/cart.js";
+import toast from 'react-hot-toast';
 
 const HomeProducts = () => {
     const navigate = useNavigate();
+    const [cart,setCart] = useCart();
     const [Products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const [checked, setChecked] = useState([]);
@@ -146,12 +149,20 @@ const HomeProducts = () => {
                         <div className="product_card" >
                         <Link key={p._id} to={`/product-datils/${p.slug}`}>
                             <div className="product_img">
-                            <img src={`/api/v1/product/product-photo/${p._id}`} alt={p.name} />
+                                <img src={`/api/v1/product/product-photo/${p._id}`} alt={p.name} />
                             </div>
                         </Link>
                         <div className="homeProduct_detail">
                             <span>{p.name}</span>
-                            <button>Add to Cart</button>
+                            <button
+                                onClick={() => {
+                                    setCart([...cart,p])
+                                    localStorage.setItem('cart', JSON.stringify([...cart,p]))
+                                    toast.success('Item added to cart');
+                                }}
+                            >
+                                Add to Cart
+                            </button>
                         </div>
                         </div>
                     ))}

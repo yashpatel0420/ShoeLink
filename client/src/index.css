@@ -630,6 +630,21 @@ section{
   flex-basis: 50%;
   min-width: 300px;
 }
+.addCart_btn{
+  display: inline-block;
+  font-family: 'Futura-Std-Heavy-Oblique';
+  background-color: #1d2026;
+  color: white;
+  padding: 8px 30px;
+  margin: 30px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+.addCart_btn:hover{
+  color: #1d2026;
+  background-color: rgb(255, 72, 72);
+}
 .col-2 h1{
   font-size: 50px;
   line-height: 60px;
@@ -696,5 +711,154 @@ input:focus{
   font-family: "Futura-Std-Extra-Bold-Condensed-Oblique";
   letter-spacing: 1px;
   background-color: #1d2026;
+}
+/* ========================================= */
+
+
+/* =============== Cart Page Css ============== */
+.cart-text-box{
+  padding: 10px 20px 1px 20px;
+  color: #fff;
+  border-radius: 10px;
+  margin: 30px 50px;
+  background-color: #1d2026;
+}
+.cart-text-box h3{
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  border-bottom: 3px solid rgb(255, 72, 72);
+}
+.cartContent{
+  margin: 0px 50px;
+}
+.cart_heading{
+  text-align: center; 
+  padding: 10px 0px;
+  font-size: 25px;
+  color: #24252a;
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+}
+.cart_heading span{
+  font-family: "Futura-Std-Extra-Bold-Condensed-Oblique", sans-serif;
+  color: rgb(255, 217, 0); 
+}
+.cart_product_container{  
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.cart_product_card{
+  border-radius: 20px;
+  margin: 20px;
+  position: relative;
+  background-color: #f0f0f0;
+  justify-content: space-between;
+  display: flex;
+}
+.cart_product_img{
+  width: 250px;
+  padding: 20px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-position: 0 -75px;
+  background-size: cover;
+}
+.cart_product_img img{
+  width: 150px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: 0 -75px;
+  background-size: cover;
+}
+.cart_product_details{
+  padding: 20px;
+  width: 100%;
+  display: grid;
+  align-content: center;
+}
+.cart_product_details h3{
+  border-bottom: 2px solid black;
+  padding: 10px 0px;
+  font-family: 'Futura-Std-Heavy-Oblique';
+}
+.cart_product_details h5{
+  font-family: 'Futura-Std-Book';
+}
+.cart_payment{
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  position: relative;
+}
+.cart_payment h5{
+  border-bottom: 3px solid rgb(255, 72, 72);
+  padding: 5px 10px 10px 10px;
+  font-family: 'Futura-Std-Heavy-Oblique';
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+.cart_payment h4{
+  padding: 5px;
+  background-color: #1d2026;
+  color: rgb(255, 72, 72);
+  font-family: 'Futura-Std-Heavy-Oblique';
+  border-radius: 5px;
+}
+.cartRemove{
+  background-color: rgb(255, 72, 72);
+  border: none;
+  cursor: pointer;
+  padding: 3px 0px;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.cartRemove:hover{
+  background-color: rgb(255, 72, 72);
+  color: white;
+}
+.deliveryAddress{
+  padding: 20px 0px;
+}
+.deliveryAddress h3{
+  border-bottom: 3px solid rgb(255, 72, 72);
+  padding: 5px 10px 10px 10px;
+  font-family: 'Futura-Std-Heavy-Oblique';
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+.deliveryAddress h6{
+  font-family: 'Futura-Std-Book';
+  font-size: 15px
+}
+.deliveryAddress button{
+  padding: 5px 20px;
+  background-color: rgb(255, 72, 72);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Futura-Std-Heavy-Oblique';
+  cursor: pointer;
+}
+.deliveryAddress button:hover{
+  color: #1d2026;
+}
+.makePayment{
+  padding: 5px 20px;
+  background-color: rgb(255, 72, 72);
+  border: none;
+  margin-top: 10PX;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Futura-Std-Heavy-Oblique';
+  cursor: pointer;
+}
+.makePayment:hover{
+  color: #1d2026;
 }
 /* ========================================= */

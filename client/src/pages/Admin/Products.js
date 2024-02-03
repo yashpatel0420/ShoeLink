@@ -7,21 +7,57 @@ import { Link } from 'react-router-dom';
 
 const Products = () => {
     const [products,setProducts] = useState([]);
+    const [total, setTotal] = useState(0);
+    const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState(false);
+
 
     //Get All Products
     const getAllProducts = async () => {
         try{
-            const {data} = await axios.get("/api/v1/product/get-product");
+            setLoading(true);
+            const {data} = await axios.get(`/api/v1/product/product-list/${page}`);
+            setLoading(false);
             setProducts(data.products)
         } catch (error) {
+            setLoading(false);
             console.log(error);
             toast.error("Something went wrong");
+        }
+    };
+
+    //Get total count
+    const getTotal = async () => {
+        try {
+            const {data} = await axios.get('/api/v1/product/product-count');
+            setTotal(data?.total);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        if (page === 1) return;
+        loadMore();
+    }, [page]);
+
+    //load more
+    const loadMore = async () => {
+        try {
+        setLoading(true);
+        const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+        setLoading(false);
+        setProducts([...products, ...data?.products]);
+        } catch (error) {
+        console.log(error);
+        setLoading(false);
         }
     };
 
     // lifecycle method
     useEffect(() => {
         getAllProducts();
+        getTotal();
     }, []);
   return (
     <Layout> 
@@ -49,6 +85,18 @@ const Products = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+                <div>
+                    {products && products.length <total && (
+                        <button className='LoadMore'
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setPage(page + 1);
+                            }}
+                        >
+                            {loading ? "Loading..." : "Loadmore"}
+                        </button>
+                    )}
                 </div>
             </div>
         </div>

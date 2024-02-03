@@ -3,11 +3,14 @@ import Layout from './../components/layout/Layout';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/cart';
+import toast from 'react-hot-toast';
 
 const ProductDetails = () => {
   const params = useParams();
   const [product,setProduct] = useState({});
-  const [relatedProducts, setRelatedProducts] = useState([])
+  const [relatedProducts, setRelatedProducts] = useState([]);
+  const [cart, setCart] = useCart();
 
   //Initial Product details
   useEffect(() => {
@@ -43,7 +46,7 @@ const ProductDetails = () => {
             <img src={`/api/v1/product/product-photo/${product._id}`} style={{"width":"100%"}} alt={product.name} />
           </div>
           <div className="col-2">
-            <p>Home / {product.name}</p>
+            <p>Home / {product?.category?.name}</p>
             <h1>{product.name}</h1>
             <h4>${product.price}</h4>
             <select>
@@ -54,7 +57,16 @@ const ProductDetails = () => {
               <option>UK 10</option>
             </select>
             <input type="number" defaultValue={1} />
-            <a href className="btn">Add to cart</a>
+            <button  
+              className="addCart_btn"
+              onClick={() => {
+                setCart([...cart,product])
+                localStorage.setItem('cart', JSON.stringify([...cart,product]))
+                toast.success('Item added to cart');
+              }}
+            >
+              Add to cart
+            </button>
             <h3>Product Details</h3>
             <br />
             <p>{product.description}</p>
@@ -63,6 +75,7 @@ const ProductDetails = () => {
       </div>
       <div className='similarProducts'>
         <h2>Similar Products</h2>
+        {relatedProducts.length < 1 && <h3 style={{"textAlign":"center"}}>No Similar Products found</h3>}
         <div className="product_container">
           {relatedProducts?.map(p => (
             <div className="product_card" >
@@ -73,7 +86,15 @@ const ProductDetails = () => {
               </Link>
               <div className="homeProduct_detail">
                 <span>{p.name}</span>
-                <button>Add to Cart</button>
+                <button
+                  onClick={() => {
+                  setCart([...cart,p])
+                  localStorage.setItem('cart', JSON.stringify([...cart,p]))
+                  toast.success('Item added to cart');
+                }}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           ))}

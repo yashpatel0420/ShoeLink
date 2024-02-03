@@ -6,10 +6,11 @@ import Badge from '@mui/material/Badge';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
-import SearchInput from '../Form/SearchInput';
+import { useCart } from '../../context/cart';
 
 const Header = () => {
   const [auth,setAuth] = useAuth();
+  const [cart] = useCart();
   const handleLogout = () => {
     setAuth({
       ...auth, 
@@ -31,7 +32,7 @@ const Header = () => {
               <NavLink to="contact">Contact Us</NavLink>
             </div>
           <div className="icons">
-              <Badge badgeContent={4} color="primary">
+              <Badge badgeContent={cart?.length} color="primary">
                 <NavLink to="/cart"><i><ShoppingCartIcon id="icon" /></i></NavLink>
               </Badge>
               {
