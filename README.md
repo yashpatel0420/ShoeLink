@@ -15,3 +15,5 @@ Filter Categories: Enhance the browsing experience with intuitive category filte
 Responsive Design: Enjoy seamless access to our platform across desktops, laptops, tablets, and smartphones. Our responsive design ensures optimal performance and compatibility across a variety of devices and screen sizes.
 
 Experience the joy of shopping for high-quality footwear from the comfort of your home. Discover your perfect pair today at ShoeLink!
+
+*** You can find the entire code on master branch ***
