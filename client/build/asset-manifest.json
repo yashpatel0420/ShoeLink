@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3114fe40.css",
+    "main.js": "/static/js/main.8c1b936a.js",
+    "static/js/787.d5fa4d18.chunk.js": "/static/js/787.d5fa4d18.chunk.js",
+    "static/media/Nike.mp4": "/static/media/Nike.3667ce1c02ae90e6b740.mp4",
+    "static/media/advertisement.mp4": "/static/media/advertisement.6d8e4a0a8b23d50eda15.mp4",
+    "static/media/about-app.png": "/static/media/about-app.01b38fc08063bac6347c.png",
+    "static/media/About.png": "/static/media/About.822f0d7fa4d5ed3268e5.png",
+    "static/media/woman.png": "/static/media/woman.d51020a5ac51f32d27b3.png",
+    "static/media/slider2.jpeg": "/static/media/slider2.39a2d96b86edb25a24ae.jpeg",
+    "static/media/man.png": "/static/media/man.0ca5c115f66b9d1767b1.png",
+    "static/media/kids.png": "/static/media/kids.3232b5f37b9a0c4b6d27.png",
+    "static/media/slider.png": "/static/media/slider.7d33f8a5aa882d3d76bd.png",
+    "static/media/Futura Std Extra Bold Oblique.ttf": "/static/media/Futura Std Extra Bold Oblique.d29aebaa6c90572e86bc.ttf",
+    "static/media/Futura Std Extra Bold Condensed Oblique.ttf": "/static/media/Futura Std Extra Bold Condensed Oblique.402b3cb48bca7f4ceba1.ttf",
+    "static/media/Futura Std Heavy Oblique.ttf": "/static/media/Futura Std Heavy Oblique.128bd0bb1f51d43449aa.ttf",
+    "static/media/Futura Std Book Oblique.ttf": "/static/media/Futura Std Book Oblique.589dfe9fb7695bc858c0.ttf",
+    "static/media/Futura Std Book.ttf": "/static/media/Futura Std Book.2a4d2daaa920bc9e8f4b.ttf",
+    "static/media/slider4.jpeg": "/static/media/slider4.d28b3c6dd337e99dac4d.jpeg",
+    "static/media/slider5.jpeg": "/static/media/slider5.033165d8e5ac8863db66.jpeg",
+    "static/media/slider3.jpeg": "/static/media/slider3.e80f19d95cf60e6f332e.jpeg",
+    "static/media/logo.png": "/static/media/logo.fe8c37aa96cb955eebbf.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.3114fe40.css.map": "/static/css/main.3114fe40.css.map",
+    "main.8c1b936a.js.map": "/static/js/main.8c1b936a.js.map",
+    "787.d5fa4d18.chunk.js.map": "/static/js/787.d5fa4d18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3114fe40.css",
+    "static/js/main.8c1b936a.js"
+  ]
+}
